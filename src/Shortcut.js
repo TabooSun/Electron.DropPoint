@@ -7,7 +7,7 @@ const configOptions = require("./configOptions");
  * Sets Shift + Caps Lock as Shortcut. Change to convenience
  */
 const setShortcut = () => {
-  let shortcut = "Shift+Capslock";
+  let shortcut = "Ctrl+Alt+Z";
 
   if (process.platform === "darwin") {
     //caps lock is not a modifier in mac
