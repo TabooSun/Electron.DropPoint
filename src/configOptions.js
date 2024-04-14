@@ -1,17 +1,18 @@
 const defaultAppConfig = {
-  debug: false,
+  spawnOnLaunch: true,
   alwaysOnTop: true,
   openAtCursorPosition: false,
   shortcutAction: "toggle",
+  debug: false,
 };
 const appConfigSchema = {
-  debug: {
+  spawnOnLaunch: {
     type: "boolean",
-    title: "Enable debug mode",
+    title: "Open a new instance on launch"
   },
   alwaysOnTop: {
     type: "boolean",
-    title: "Always on Top",
+    title: "Always on top",
   },
   openAtCursorPosition: {
     type: "boolean",
@@ -20,7 +21,11 @@ const appConfigSchema = {
   shortcutAction: {
     enum: ["toggle", "spawn"],
     type: "string",
-    title: "Shortcut Behaviour",
+    title: "Shortcut behaviour",
+  },
+  debug: {
+    type: "boolean",
+    title: "Enable debug mode",
   },
 };
 module.exports = {

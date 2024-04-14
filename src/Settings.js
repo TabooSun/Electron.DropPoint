@@ -24,17 +24,17 @@ class Settings {
     this.settings = new BrowserWindow({
       title: "Settings - DropPoint",
       width: 600,
-      height: 350,
+      height: 450,
       webPreferences: {
         nodeIntegration: true,
         preload: path.join(__dirname, "preload.js"),
         icon: nativeImage.createFromPath(droppointDefaultIcon),
       },
     });
-    this.settings.webContents.openDevTools(); // For Debugging purposes
+    // this.settings.webContents.openDevTools(); // For Debugging purposes
     this.settings.removeMenu();
     const html_path = path.join(__dirname, "../static/settings.html");
-    this.settings.loadURL(`file://${html_path}`).then(() => {});
+    this.settings.loadURL(`file://${html_path}`).then(() => { });
   }
 }
 
